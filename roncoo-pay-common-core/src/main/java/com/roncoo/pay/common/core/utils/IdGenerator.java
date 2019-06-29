@@ -8,8 +8,7 @@ import java.net.UnknownHostException;
 /**
  * 与snowflake算法区别,返回字符串id,占用更多字节,但直观从id中看出生成时间
  *
- * @Project concurrency
- * Created by wgy on 16/7/19.
+ * Created by Cougar on 16/7/19.
  */
 public enum IdGenerator {
 
@@ -71,6 +70,10 @@ public enum IdGenerator {
         return System.currentTimeMillis();
     }
 
+    /**
+     * 获取本机IP地址
+     * @return
+     */
     private byte getLastIP() {
         byte lastip = 0;
         try {
